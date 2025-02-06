@@ -1,13 +1,13 @@
 {
-  "name": "helioslauncher",
-  "version": "2.2.1",
-  "productName": "Helios Launcher",
-  "description": "Modded Minecraft Launcher",
-  "author": "Daniel Scalzi (https://github.com/dscalzi/)",
+  "name": "doteulauncher",
+  "version": "1.0.0",
+  "productName": "Doteu Launcher",
+  "description": "Doteu's Minecraft Launcher",
+  "author": "Dotue (https://github.com/K-SeongWon)",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/dscalzi/HeliosLauncher",
+  "homepage": "https://github.com/K-SeongWon/DoteuLauncher",
   "bugs": {
-    "url": "https://github.com/dscalzi/HeliosLauncher/issues"
+    "url": "https://github.com/K-SeongWon/DoteuLauncher"
   },
   "private": true,
   "main": "index.js",
@@ -26,6 +26,7 @@
     "@electron/remote": "^2.1.2",
     "adm-zip": "^0.5.16",
     "discord-rpc-patch": "^4.0.1",
+    "doteulauncher": "file:",
     "ejs": "^3.1.10",
     "ejs-electron": "^3.0.0",
     "electron-updater": "^6.3.9",
