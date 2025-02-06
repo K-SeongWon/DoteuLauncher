@@ -13,6 +13,33 @@ const { pathToFileURL }                 = require('url')
 const { AZURE_CLIENT_ID, MSFT_OPCODE, MSFT_REPLY_TYPE, MSFT_ERROR, SHELL_OPCODE } = require('./app/assets/js/ipcconstants')
 const LangLoader                        = require('./app/assets/js/langloader')
 
+
+
+
+
+
+//@electron/remote 활성화
+app.whenReady().then(() => {
+    remoteMain.initialize() // remote 모듈 초기화
+    const win = new BrowserWindow({
+        webPreferences: {
+            enableRemoteModule: true, // 이 옵션은 최신 Electron에서는 필요 없음
+            nodeIntegration: true
+        }
+    })
+
+    remoteMain.enable(win.webContents) // remote 활성화
+})
+
+
+
+
+
+
+
+
+
+
 // Setup Lang
 LangLoader.setupLanguage()
 
