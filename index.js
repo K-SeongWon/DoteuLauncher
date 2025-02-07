@@ -17,7 +17,7 @@ const LangLoader                        = require('./app/assets/js/langloader')
 
 
 
-
+/*
 //@electron/remote 활성화
 app.whenReady().then(() => {
     remoteMain.initialize() // remote 모듈 초기화
@@ -30,8 +30,7 @@ app.whenReady().then(() => {
 
     remoteMain.enable(win.webContents) // remote 활성화
 })
-
-
+*/
 
 
 
