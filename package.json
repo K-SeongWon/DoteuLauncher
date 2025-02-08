@@ -1,7 +1,7 @@
 {
   "name": "doteulauncher",
   "version": "1.0.0",
-  "productName": "Doteu Launcher",
+  "productName": "도트의 놀이터 런처",
   "description": "Doteu's Minecraft Launcher",
   "author": "Dotue (https://github.com/K-SeongWon)",
   "license": "UNLICENSED",
@@ -48,6 +48,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dscalzi/HeliosLauncher.git"
+    "url": "git+https://github.com/K-SeongWon/DoteuLauncher"
   }
 }

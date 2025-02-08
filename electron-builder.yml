@@ -1,5 +1,5 @@
 appId: 'doteulauncher'
-productName: 'Doteu Launcher'
+productName: '도트의 놀이터 런처'
 artifactName: '${productName}-setup-${version}.${ext}'
 
 copyright: 'Copyright © 2025 Doteu'
@@ -13,6 +13,13 @@ files:
 extraResources:
   - 'libraries'
   - './node_modules/@electron/remote/**'
+  - "./node_modules/discord-rpc-patch/**"
+  - "./node_modules/node-fetch/**"
+  - "./node_modules/whatwg-url/**"
+  - "./node_modules/webidl-conversions/**"
+  - "./node_modules/tr46/**"
+  - "./node_modules/adm-zip/**"
+
 
 # Windows Configuration
 win: 
