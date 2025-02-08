@@ -1,7 +1,7 @@
 # Custom Language File for Launcher Customizer
 
 [ejs.app]
-title = "Doteu Launcher"
+title = "도트의 놀이터 런처"
 
 [ejs.landing]
 mediaGitHubURL = "https://github.com/K-SeongWon/DoteuLauncher"
