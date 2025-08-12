@@ -1,6 +1,6 @@
 appId: 'doteulauncher'
 productName: '도트 런처'
-artifactName: 'Doteu-Launcher-setup-${version}.${ext}'
+artifactName: 'Doteu-Launcher-setup-${version}-${arch}.${ext}'
 
 copyright: 'Copyright © 2025 Doteu'
 
@@ -21,8 +21,10 @@ extraResources:
   - "./node_modules/adm-zip/**"
 
 publish:
-  provider: 'generic'
-  url: 'https://github.com/K-SeongWon/DoteuLauncher'
+  provider: 'github'
+  owner: 'K-SeongWon'
+  repo: 'DoteuLauncher'
+  releaseType: release
 
 
 # Windows Configuration
