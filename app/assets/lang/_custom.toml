@@ -1,7 +1,7 @@
 # Custom Language File for Launcher Customizer
 
 [ejs.app]
-title = "도트의 놀이터 런처"
+title = "도트 런처"
 
 [ejs.landing]
 mediaGitHubURL = "https://github.com/K-SeongWon/DoteuLauncher"
@@ -16,5 +16,5 @@ supportLink = "#"
 
 [ejs.welcome]
 welcomeHeader = "환영합니다"
-welcomeDescription = "도트의 놀이터 통합 설치 & 실행을 위한 런처입니다."
+welcomeDescription = "도트 서버 접속을 위한 런처입니다."
 welcomeDescCTA = "자세한 정보는 디스코드 채널을 참고해주세요."
