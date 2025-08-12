@@ -4,14 +4,16 @@
 
 <em><h5 align="center">('Electron Launcher'를 계승한 프로젝트)</h5></em>
 
-[<p align="center"><img src="https://img.shields.io/github/actions/workflow/status/dscalzi/HeliosLauncher/build.yml?branch=master&style=for-the-badge" alt="gh actions">](https://github.com/dscalzi/HeliosLauncher/actions) [<img src="https://img.shields.io/github/downloads/dscalzi/HeliosLauncher/total.svg?style=for-the-badge" alt="downloads">](https://github.com/K-SeongWon/DoteuLauncher/releases) <img src="https://forthebadge.com/images/badges/winter-is-coming.svg"  height="28px" alt="winter-is-coming"></p>
+[<p align="center"><img src="https://img.shields.io/github/actions/workflow/status/dscalzi/HeliosLauncher/build.yml?branch=master&style=for-the-badge" alt="gh actions">](https://github.com/K-SeongWon/DoteuLauncher/actions) [<img src="https://img.shields.io/github/downloads/K-SeongWon/DoteuLauncher/total.svg?style=for-the-badge" alt="downloads">](https://github.com/K-SeongWon/DoteuLauncher/releases) <img src="https://forthebadge.com/images/badges/winter-is-coming.svg"  height="28px" alt="winter-is-coming"></p>
 
-<p align="center">자바, 포지, 패브릭 그리고 기타 여러 모드들 설치하기 힘드셨나요? 아무 걱정말고 마인크래프트 모드 서버에 참여하세요. 설치는 '도트 런처'가 대신 해드립니다.</p>
+<p align="center">자바, 포지, 패브릭 그리고 기타 여러 모드들 설치하기 힘드셨나요?
+아무 걱정말고 마인크래프트 모드 서버에 참여하세요.
+설치는 '도트 런처'가 대신 해드립니다.</p>
 
-![Screenshot 1](https://i.imgur.com/6o7SmH6.png)
-![Screenshot 2](https://i.imgur.com/x3B34n1.png)
+![Screenshot 1](https://i.imgur.com/QAuGVkx.png)
+![Screenshot 2](https://i.imgur.com/g2dsWbs.png)
 
-## Features
+## 특징
 
 * 🔒 편리한 계정관리
   * 여러 계정을 추가하고, 편리하게 변경하세요.
@@ -40,14 +42,14 @@
 
 ## 다운로드
 
-[GitHub 릴리즈](https://github.com/dscalzi/HeliosLauncher/releases)에서 다운로드 하실 수 있습니다.
+[GitHub 릴리즈](https://github.com/K-SeongWon/DoteuLauncher/releases)에서 다운로드 하실 수 있습니다.
 
 #### 최신 릴리즈
 
-[![](https://img.shields.io/github/release/dscalzi/HeliosLauncher.svg?style=flat-square)](https://github.com/K-SeongWon/DoteuLauncher/releases/latest)
+[![](https://img.shields.io/github/v/release/K-SeongWon/DoteuLauncher.svg?style=flat-square)](https://github.com/K-SeongWon/DoteuLauncher/releases/latest)
 
 #### 최신 프리-릴리즈
-[![](https://img.shields.io/github/release/dscalzi/HeliosLauncher/all.svg?style=flat-square)](https://github.com/K-SeongWon/DoteuLauncher/releases)
+[![](https://img.shields.io/github/v/release/K-SeongWon/DoteuLauncher.svg?style=flat-square)](https://github.com/K-SeongWon/DoteuLauncher/releases)
 
 **지원하는 플랫폼**
 
@@ -95,8 +97,8 @@ ctrl + shift + i
 **종속성 복제 및 설치**
 
 ```console
-> git clone https://github.com/dscalzi/HeliosLauncher.git
-> cd HeliosLauncher
+> git clone https://github.com/K-SeongWon/DoteuLauncher.git
+> cd DoteuLauncher
 > npm install
 ```
 
