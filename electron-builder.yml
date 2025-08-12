@@ -1,6 +1,6 @@
 appId: 'doteulauncher'
 productName: '도트의 놀이터 런처'
-artifactName: '${productName}-setup-${version}.${ext}'
+artifactName: 'Doteu_Playground_Launcher-setup-${version}.${ext}'
 
 copyright: 'Copyright © 2025 Doteu'
 
