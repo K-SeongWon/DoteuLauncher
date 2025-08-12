@@ -1,8 +1,8 @@
 {
   "name": "doteulauncher",
-  "version": "1.0.1",
-  "productName": "도트의 놀이터 런처",
-  "description": "Doteu's Minecraft Launcher",
+  "version": "1.0.2",
+  "productName": "도트 런처",
+  "description": "Doteu Launcher",
   "author": "Dotue (https://github.com/K-SeongWon)",
   "license": "UNLICENSED",
   "homepage": "https://github.com/K-SeongWon/DoteuLauncher",
@@ -48,6 +48,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/K-SeongWon/DoteuLauncher"
+    "url": "https://github.com/K-SeongWon/DoteuLauncher"
   }
 }
