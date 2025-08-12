@@ -1,6 +1,6 @@
 appId: 'doteulauncher'
-productName: '도트의 놀이터 런처'
-artifactName: 'Doteu_Playground_Launcher-setup-${version}.${ext}'
+productName: '도트 런처'
+artifactName: 'Doteu-Launcher-setup-${version}.${ext}'
 
 copyright: 'Copyright © 2025 Doteu'
 
@@ -19,6 +19,10 @@ extraResources:
   - "./node_modules/webidl-conversions/**"
   - "./node_modules/tr46/**"
   - "./node_modules/adm-zip/**"
+
+publish:
+  provider: 'generic'
+  url: 'https://github.com/K-SeongWon/DoteuLauncher'
 
 
 # Windows Configuration
