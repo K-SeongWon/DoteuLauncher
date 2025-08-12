@@ -3137,6 +3137,11 @@ input:checked + .toggleSwitchSlider:before {
 }
 
 /* Twitter icon colors. */
+
+#twitterBox {
+    display: none;
+}
+
 #twitterSVG:hover,
 #twitterURL:focus #twitterSVG {
     fill: #1da1f2;
@@ -3146,6 +3151,11 @@ input:checked + .toggleSwitchSlider:before {
 }
 
 /* Instagram icon colors. */
+
+#instagramBox {
+    display: none;
+}
+
 #instagramSVG:hover,
 #instagramURL:focus #instagramSVG {
     fill: url('#instaFill')
@@ -3156,6 +3166,11 @@ input:checked + .toggleSwitchSlider:before {
 }
 
 /* Youtube icon colors. */
+
+#youtubeBox {
+    display: none;
+}
+
 #youtubeSVG:hover,
 #youtubeURL:focus #youtubeSVG {
     fill: #f00;
@@ -3165,6 +3180,11 @@ input:checked + .toggleSwitchSlider:before {
 }
 
 /* Discord icon colors. */
+
+#discordBox {
+    display: none;
+}
+
 #discordSVG:hover,
 #discordURL:focus #discordSVG {
     fill: #7288d9;
