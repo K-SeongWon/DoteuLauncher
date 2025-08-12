@@ -54,24 +54,29 @@ function initAutoUpdater(event, data) {
     
     if(isDev){
         autoUpdater.autoInstallOnAppQuit = false
-        autoUpdater.updateConfigPath = path.join(__dirname, 'dev-app-update.yml')
+        // autoUpdater.updateConfigPath = path.join(__dirname, 'dev-app-update.yml')
     }
     if(process.platform === 'darwin'){
         autoUpdater.autoDownload = false
     }
     autoUpdater.on('update-available', (info) => {
+        console.log('Update available:', info)
         event.sender.send('autoUpdateNotification', 'update-available', info)
     })
     autoUpdater.on('update-downloaded', (info) => {
+        console.log('Update downloaded:', info)
         event.sender.send('autoUpdateNotification', 'update-downloaded', info)
     })
     autoUpdater.on('update-not-available', (info) => {
+        console.log('Update not available:', info)
         event.sender.send('autoUpdateNotification', 'update-not-available', info)
     })
     autoUpdater.on('checking-for-update', () => {
+        console.log('Checking for update...')
         event.sender.send('autoUpdateNotification', 'checking-for-update')
     })
     autoUpdater.on('error', (err) => {
+        console.error('AutoUpdater Error:', err)
         event.sender.send('autoUpdateNotification', 'realerror', err)
     }) 
 }
@@ -85,8 +90,9 @@ ipcMain.on('autoUpdateAction', (event, arg, data) => {
             event.sender.send('autoUpdateNotification', 'ready')
             break
         case 'checkForUpdate':
-            autoUpdater.checkForUpdates()
+            autoUpdater.checkForUpdatesAndNotify()
                 .catch(err => {
+                    console.error('Error during checkForUpdatesAndNotify:', err)
                     event.sender.send('autoUpdateNotification', 'realerror', err)
                 })
             break
