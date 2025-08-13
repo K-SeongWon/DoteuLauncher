@@ -8,6 +8,9 @@ asar: true
 compression: 'maximum'
 
 files:
+  - 'app/'
+  - 'index.js'
+  - 'package.json'
   - '!{dist,.gitignore,.vscode,docs,dev-app-update.yml,.nvmrc,.eslintrc.json}'
 
 extraResources:
@@ -19,12 +22,15 @@ extraResources:
   - "./node_modules/webidl-conversions/**"
   - "./node_modules/tr46/**"
   - "./node_modules/adm-zip/**"
+  - ".env"
 
 publish:
   provider: 'github'
-  owner: 'K-SeongWon'
-  repo: 'DoteuLauncher'
+  owner: '${env.GITHUB_OWNER}'
+  repo: '${env.GITHUB_REPO}'
   releaseType: release
+  private: true
+  token: '${env.GH_TOKEN}'
 
 
 # Windows Configuration
