@@ -13,7 +13,7 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder build",
+    "dist": "dotenv electron-builder build",
     "dist:win": "npm run dist -- -w",
     "dist:mac": "npm run dist -- -m",
     "dist:linux": "npm run dist -- -l",
@@ -26,6 +26,7 @@
     "@electron/remote": "^2.1.2",
     "adm-zip": "^0.5.16",
     "discord-rpc-patch": "^4.0.1",
+    "dotenv": "^16.4.5",
     "doteulauncher": "file:",
     "ejs": "^3.1.10",
     "ejs-electron": "^3.0.0",
@@ -42,6 +43,7 @@
     "toml": "^3.0.0"
   },
   "devDependencies": {
+    "dotenv-cli": "^10.0.0",
     "electron": "^33.2.1",
     "electron-builder": "^25.1.8",
     "eslint": "^8.57.1"

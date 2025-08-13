@@ -1,5 +1,6 @@
-const remoteMain = require('@electron/remote/main')
-remoteMain.initialize()
+
+
+
 
 // Requirements
 const { app, BrowserWindow, ipcMain, Menu, shell } = require('electron')
@@ -12,10 +13,41 @@ const semver                            = require('semver')
 const { pathToFileURL }                 = require('url')
 const { AZURE_CLIENT_ID, MSFT_OPCODE, MSFT_REPLY_TYPE, MSFT_ERROR, SHELL_OPCODE } = require('./app/assets/js/ipcconstants')
 const LangLoader                        = require('./app/assets/js/langloader')
+const remoteMain                        = require('@electron/remote/main')
+
+// ========================================================
+// "dotenv" 모듈 없이 .env 파일을 직접 읽는 최종 코드
+// ========================================================
+try {
+    // app.isPackaged는 앱이 빌드되었는지 여부를 알려주는 Electron의 공식적인 방법입니다.
+    const envPath = app.isPackaged
+        ? path.join(process.resourcesPath, '.env') // 빌드된 경우, resources 폴더에서 찾습니다.
+        : path.resolve(process.cwd(), '.env')      // 개발 중인 경우, 프로젝트 루트에서 찾습니다.
+    
+    if (fs.existsSync(envPath)) {
+        const envContent = fs.readFileSync(envPath, 'utf8')
+        const lines = envContent.split('\n')
+        for (const line of lines) {
+            const trimmedLine = line.trim()
+            if (trimmedLine && !trimmedLine.startsWith('#')) {
+                const [key, ...valueParts] = trimmedLine.split('=')
+                const value = valueParts.join('=').trim()
+                if (key && value) {
+                    process.env[key.trim()] = value
+                }
+            }
+        }
+        console.log('Successfully loaded environment variables from .env file.')
+    } else {
+        console.error('.env file not found at path:', envPath)
+    }
+} catch (e) {
+    console.error('Failed to load .env file manually:', e)
+}
+// ========================================================
 
 
-
-
+remoteMain.initialize()
 
 /*
 //@electron/remote 활성화
