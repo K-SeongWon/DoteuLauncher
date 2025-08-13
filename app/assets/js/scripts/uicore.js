@@ -49,8 +49,16 @@ if(!isDev){
                 loggerAutoUpdater.info('New update available', info.version)
                 
                 if(process.platform === 'darwin'){
-                    info.darwindownload = `https://github.com/K-SeongWon/DoteuLauncher-Private/releases/download/${info.version}/Doteu-Launcher-setup-${info.version}${process.arch === 'arm64' ? '-arm64' : '-x64'}.exe`
-                    showUpdateUI(info)
+
+                    const owner = remote.process.env.GITHUB_OWNER
+                    const repo = remote.process.env.GITHUB_REPO
+
+                    if(owner && repo) {
+                        info.darwindownload = `https://github.com/${owner}/${repo}/releases/download/${info.version}/Doteu-Launcher-setup-${info.version}${process.arch === 'arm64' ? '-arm64' : '-x64'}.exe`
+                        showUpdateUI(info)
+                    } else {
+                        loggerAutoUpdater.error('GITHUB_OWNER or GITHUB_REPO not found in environment variables.')
+                    }
                 }
                 
                 populateSettingsUpdateInformation(info)
