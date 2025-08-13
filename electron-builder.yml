@@ -26,11 +26,11 @@ extraResources:
 
 publish:
   provider: 'github'
-  owner: ${env.GITHUB_OWNER}
-  repo: ${env.GITHUB_REPO}
+  owner: '${env.GITHUB_OWNER}'
+  repo: '${env.GITHUB_REPO}'
   releaseType: release
   private: true
-  token: ${env.GH_TOKEN}
+  token: '${env.GH_TOKEN}'
 
 
 # Windows Configuration
