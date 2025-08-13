@@ -25,6 +25,8 @@ publish:
   owner: 'K-SeongWon'
   repo: 'DoteuLauncher'
   releaseType: release
+  private: true
+  token: "${process.env.GH_TOKEN}"
 
 
 # Windows Configuration
