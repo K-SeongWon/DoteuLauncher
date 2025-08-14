@@ -2,7 +2,9 @@
 // REPLACE THIS CLIENT ID WITH YOUR APPLICATION ID.
 // SEE https://github.com/dscalzi/HeliosLauncher/blob/master/docs/MicrosoftAuth.md
 
-exports.AZURE_CLIENT_ID = process.env.AZURE_ID
+exports.getAzureClientID = function() {
+    return process.env.AZURE_ID
+}
 // SEE NOTE ABOVE.
 
 
