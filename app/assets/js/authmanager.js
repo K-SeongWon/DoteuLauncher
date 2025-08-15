@@ -14,8 +14,12 @@ const { LoggerUtil }         = require('helios-core')
 const { RestResponseStatus } = require('helios-core/common')
 const { MojangRestAPI, MojangErrorCode } = require('helios-core/mojang')
 const { MicrosoftAuth, MicrosoftErrorCode } = require('helios-core/microsoft')
-const { AZURE_CLIENT_ID }    = require('./ipcconstants')
+// ipcconstants에서 AZURE_CLIENT_ID를 더 이상 가져오지 않습니다.
+// const { AZURE_CLIENT_ID } = require('./ipcconstants')
 const Lang = require('./langloader')
+
+// @electron/remote를 추가합니다.
+const remote = require('@electron/remote')
 
 const log = LoggerUtil.getLogger('AuthManager')
 
@@ -182,6 +186,12 @@ const AUTH_MODE = { FULL: 0, MS_REFRESH: 1, MC_REFRESH: 2 }
  */
 async function fullMicrosoftAuthFlow(entryCode, authMode) {
     try {
+
+        // ========================================================
+        // 변경된 부분
+        // @electron/remote를 통해 메인 프로세스의 환경 변수를 직접 가져옵니다.
+        const AZURE_CLIENT_ID = remote.process.env.AZURE_ID
+        // ========================================================
 
         let accessTokenRaw
         let accessToken
