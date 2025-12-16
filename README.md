@@ -120,6 +120,58 @@ ctrl + shift + i
 > npm run dist
 ```
 
+---
+
+**런처 개발 및 커스텀을 위한 환경변수 (프로젝트 루트에 .env 생성)**
+
+```.env
+
+
+
+# distribution.json 경로
+# 예시 : REMOTE_DISTRO_URL=http://sample.com/distribution.json
+
+REMOTE_DISTRO_URL=
+
+
+
+# GitHub 배포 정보
+# 프라이빗 리포지토리를 통한 업데이트를 지원하기 위한 깃 허브 정보
+# 런처 업데이트를 퍼블릭 리포지토리에서 배포할 경우, 프라이빗 리포지토리 입력란에
+# 퍼블릭 리포지토리 정보를 입력할 것
+# 따옴표, 쌍따옴표 등 없이 바로 텍스트만 입력
+
+
+# 프라이빗 리포지토리 : 계정이름
+GITHUB_OWNER=
+
+# 프라이빗 리포지토리 : 리포지토리 이름
+GITHUB_REPO=
+
+# 프라이빗 리포지토리 : 프라이빗 리포지토리 접근을 위한 깃 토큰
+GH_TOKEN=
+
+# 퍼블릭 리포지토리 : 계정이름
+GITHUB_PUBLIC_OWNER=
+
+# 퍼블릭 리포지토리 : 리포지토리 이름
+GITHUB_PUBLIC_REPO=
+
+
+
+
+
+# AZURE 정보
+# 예시 : AZURE_ID=1a23b4c5-6de7-8910-f11g-h12ijk13l145
+
+AZURE_ID=
+
+
+
+```
+
+
+
 특정 플랫폼 용 설치파일 빌드하기.
 
 | Platform    | Command              |
