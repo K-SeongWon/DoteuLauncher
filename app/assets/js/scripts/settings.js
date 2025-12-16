@@ -1452,10 +1452,14 @@ function populateAboutVersionInformation(){
  * of the current version. This value is displayed on the UI.
  */
 function populateReleaseNotes(){
+    
+    const owner = remote.process.env.GITHUB_PUBLIC_OWNER
+    const repo = remote.process.env.GITHUB_PUBLIC_REPO
+
     $.ajax({
-        url: 'https://github.com/K-SeongWon/DoteuLauncher/releases.atom',
+        url: `https://github.com/${owner}/${repo}/releases.atom`,
         success: (data) => {
-            const version = 'v' + remote.app.getVersion()
+            const version = remote.app.getVersion()
             const entries = $(data).find('entry')
             
             for(let i=0; i<entries.length; i++){
