@@ -987,7 +987,7 @@ async function loadNews(){
 
                     // Fix relative links in content.
                     let content = el.find('content\\:encoded').text()
-                    let content = el.find('description').html()
+                    //let content = el.find('description').html()
                     let regex = /src="(?!http:\/\/|https:\/\/)(.+?)"/g
                     let matches
                     while((matches = regex.exec(content))){
