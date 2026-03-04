@@ -11,7 +11,7 @@ files:
   - 'app/'
   - 'index.js'
   - 'package.json'
-  - '!{dist,.gitignore,.vscode,docs,dev-app-update.yml,.nvmrc,.eslintrc.json}'
+  - '!{dist,.gitignore,.vscode,docs,dev-app-update.yml,.nvmrc,.eslintrc.config.mjs}'
 
 extraResources:
   - 'libraries'
