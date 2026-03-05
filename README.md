@@ -122,53 +122,33 @@ ctrl + shift + i
 
 ---
 
-**런처 개발 및 커스텀을 위한 환경변수 (프로젝트 루트에 .env 생성)**
+**런처 개발 및 커스텀을 위한 환경변수 설정**
 
-```.env
+프로젝트 루트의 `.env.example`을 참고해서 `.env` 파일을 생성하세요.
 
+```console
+# Windows (PowerShell)
+copy .env.example .env
 
-
-# distribution.json 경로
-# 예시 : REMOTE_DISTRO_URL=http://sample.com/distribution.json
-
-REMOTE_DISTRO_URL=
-
-
-
-# GitHub 배포 정보
-# 프라이빗 리포지토리를 통한 업데이트를 지원하기 위한 깃 허브 정보
-# 런처 업데이트를 퍼블릭 리포지토리에서 배포할 경우, 프라이빗 리포지토리 입력란에
-# 퍼블릭 리포지토리 정보를 입력할 것
-# 따옴표, 쌍따옴표 등 없이 바로 텍스트만 입력
-
-
-# 프라이빗 리포지토리 : 계정이름
-GITHUB_OWNER=
-
-# 프라이빗 리포지토리 : 리포지토리 이름
-GITHUB_REPO=
-
-# 프라이빗 리포지토리 : 프라이빗 리포지토리 접근을 위한 깃 토큰
-GH_TOKEN=
-
-# 퍼블릭 리포지토리 : 계정이름
-GITHUB_PUBLIC_OWNER=
-
-# 퍼블릭 리포지토리 : 리포지토리 이름
-GITHUB_PUBLIC_REPO=
-
-
-
-
-
-# AZURE 정보
-# 예시 : AZURE_ID=1a23b4c5-6de7-8910-f11g-h12ijk13l145
-
-AZURE_ID=
-
-
-
+# macOS / Linux
+cp .env.example .env
 ```
+
+`.env` 작성 시 주의사항:
+
+* 값은 가능하면 따옴표 없이 작성하세요.
+* `GH_TOKEN`처럼 민감한 값은 절대 커밋하지 마세요.
+* 빌드된 앱에서도 `.env`가 로드됩니다.
+
+주요 환경변수:
+
+* `REMOTE_DISTRO_URL`: `distribution.json` 원격 주소
+* `GITHUB_OWNER`, `GITHUB_REPO`, `GH_TOKEN`: 업데이트 배포용 GitHub 설정
+* `GITHUB_PUBLIC_OWNER`, `GITHUB_PUBLIC_REPO`: 퍼블릭 릴리즈 저장소 정보
+* `AZURE_ID`: Microsoft 로그인용 Azure 앱 클라이언트 ID
+* `LAUNCHER_MEDIA_GITHUB_URL`, `LAUNCHER_MEDIA_X_URL`, `LAUNCHER_MEDIA_INSTAGRAM_URL`, `LAUNCHER_MEDIA_YOUTUBE_URL`, `LAUNCHER_MEDIA_DISCORD_URL`: 런처 메인 화면 SNS 링크
+
+`LAUNCHER_MEDIA_*` 값이 비어 있으면, 기본값(`app/assets/lang/_custom.toml`)이 사용됩니다.
 
 
 

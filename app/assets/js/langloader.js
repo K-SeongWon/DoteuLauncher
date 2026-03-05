@@ -5,6 +5,24 @@ const merge = require('lodash.merge')
 
 let lang
 
+function getEnvValue(key){
+    const raw = process.env[key]
+    if(raw == null){
+        return null
+    }
+
+    const trimmed = raw.trim()
+    if(trimmed.length === 0){
+        return null
+    }
+
+    if((trimmed.startsWith('"') && trimmed.endsWith('"')) || (trimmed.startsWith("'") && trimmed.endsWith("'"))){
+        return trimmed.slice(1, -1).trim()
+    }
+
+    return trimmed
+}
+
 exports.loadLanguage = function(id){
     lang = merge(lang || {}, toml.parse(fs.readFileSync(path.join(__dirname, '..', 'lang', `${id}.toml`))) || {})
 }
@@ -40,4 +58,22 @@ exports.setupLanguage = function(){
 
     // Load Custom Language File for Launcher Customizer
     exports.loadLanguage('_custom')
+
+    // Override selected custom landing links from .env.
+    const landingEnvMap = {
+        mediaGitHubURL: getEnvValue('LAUNCHER_MEDIA_GITHUB_URL'),
+        mediaXURL: getEnvValue('LAUNCHER_MEDIA_X_URL'),
+        mediaInstagramURL: getEnvValue('LAUNCHER_MEDIA_INSTAGRAM_URL'),
+        mediaYouTubeURL: getEnvValue('LAUNCHER_MEDIA_YOUTUBE_URL'),
+        mediaDiscordURL: getEnvValue('LAUNCHER_MEDIA_DISCORD_URL')
+    }
+
+    lang.ejs = lang.ejs || {}
+    lang.ejs.landing = lang.ejs.landing || {}
+
+    Object.entries(landingEnvMap).forEach(([key, value]) => {
+        if(value){
+            lang.ejs.landing[key] = value
+        }
+    })
 }
